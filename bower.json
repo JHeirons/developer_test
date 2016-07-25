@@ -1,0 +1,21 @@
+{
+  "name": "viagogo_developer_test",
+  "description": "Viagogo graduate developer test",
+  "main": "index.js",
+  "authors": [
+    "Jonathan Heirons"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.8",
+    "jQuery": "^3.1.0"
+  }
+}
