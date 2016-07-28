@@ -3,7 +3,7 @@
 /*global variable*/
 var fs = require("fs");
 var file = '/Users/Home/Documents/Brackets/viagogo_developer_test/data.json';
-var data, event = [],  xy2 = [], x2, y2, x2len, y2len, arrlen, x1 = 1, y1 = -1, xy1 = [], dist;
+var data, event = [],  xy2 = [], x2, y2, x2len, y2len, arrlen, x1 = 0, y1 = 0, xy1 = [], dist;
 
 x2 = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -12,6 +12,17 @@ y2 = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 x2len = x2.length;
 y2len = y2.length;
 arrlen = 25;
+
+function coordinates() {
+    "use strict";
+    x1 = document.getElementById("x1").value;
+    y1 = document.getElementById("y1").value;
+    xy1 = [ x1, y1];
+    document.getElementById("display").innerHTML = xy1;
+    console.log(xy1);
+    return xy1;
+}
+coordinates();
 
 function ecoors(xy2, x2len, y2len) {
     "use strict";
@@ -66,17 +77,6 @@ function events(xy2, arrlen, dist) {
     return data;
 }
 events(xy2, arrlen, dist);
-
-function coordinates() {
-    "use strict";
-    //x1 = document.getElementById("x1").value;
-    //y1 = document.getElementById("y1").value;
-    xy1 = [ x1, y1];
-    //document.getElementById("display").innerHTML = xy1;
-    console.log(xy1);
-    return xy1;
-}
-coordinates();
 
 function manhattan(xy1, data, xy2, dist) {
     "use strict";
