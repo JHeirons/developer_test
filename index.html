@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src='js/main.js'></script>
-   
     <title>Viagogo</title>
 </head>
 
@@ -19,7 +20,16 @@
     
         <input id="subBut" type="submit" onClick="coordinates()">
         <p><span id="display"></span></p>
-        <div id="xyco" style="background:wheat"></div>
+
+    <div class="main">
+        <div class="container">
+            <h1>Events close by:</h1>
+            <div>
+                <p id="wrapper"></p>
+
+            </div>
+        </div>
+    </div>
   
     
 </body>
