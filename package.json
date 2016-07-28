@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jonny-008/developer_test/issues"
   },
-  "homepage": "https://github.com/Jonny-008/developer_test#readme"
+  "homepage": "https://github.com/Jonny-008/developer_test#readme",
+  "dependencies": {
+    "jsonfile": "^2.3.1"
+  }
 }
