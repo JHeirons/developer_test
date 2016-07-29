@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
-    <script type="text/javascript" src='js/main.js'></script>
+    <script type="text/javascript" src="js/coordinates.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
     <title>Viagogo</title>
 </head>
 
@@ -20,16 +22,8 @@
     
         <input id="subBut" type="submit" onClick="coordinates()">
         <p><span id="display"></span></p>
-
-    <div class="main">
-        <div class="container">
-            <h1>Events close by:</h1>
-            <div>
-                <p id="wrapper"></p>
-
-            </div>
-        </div>
-    </div>
+        <button id="button" type="button" onClick="main()">Click for results</button>
+        <div id="results">Here</div>
   
     
 </body>
