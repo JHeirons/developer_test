@@ -15,14 +15,16 @@
     <h1> Viagogo Developer Test</h1>
         <form id="co-form">
             <label>Enter X Coordinate:</label><br>
-            <input type="number" id="x1" value="" max="10" min="-10"><br><br>
+            <input type="number" id="x1" value="0" max="10" min="-10"><br><br>
             <label>Enter Y Coordinate:</label> <br>
-            <input type="number" id="y1" value="" max="10" min="-10"><br><br>
+            <input type="number" id="y1" value="0" max="10" min="-10"><br><br>
         </form>
     
-        <input id="subBut" type="submit" onClick="coordinates()">
+        <input id="subBut" type="submit" onClick="main()">
+         <p><span id="valid"></span></p>
+        <h3>Your coordinates are:</h3>
         <p><span id="display"></span></p>
-        <button id="button" type="button" onClick="main()">Click for results</button>
+        <h3>Events close to you:</h3>
         <div id="results">
 
         </div>

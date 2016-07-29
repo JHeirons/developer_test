@@ -1,0 +1,14 @@
+table {
+    border-collapse: collapse;
+    width:80%;
+    border-color: gainsboro;
+}
+
+td {
+    height: 20px;
+    vertical-align: top;
+    text-align: left;
+    padding: 10px;
+}
+
+tr:nth-child(odd) {background-color: #f2f2f2}
