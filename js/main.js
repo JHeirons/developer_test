@@ -80,9 +80,9 @@ coordinates();
 
 function main() {
     "use strict";
-    var results;
+    var i, closeFive = [], html;
     function manhattan() {
-        var i, j, x1, y1, x2, y2, closeFive = [];
+        var i, j, x1, y1, x2, y2;
         for (i = 0; i < data.event.length; i++) {
             x1 = xy1[0];
             y1 = xy1[1];
@@ -103,7 +103,7 @@ function main() {
             return 0;
         }
         data.event.sort(compare);
-        results = {Event : closeFive};
+        //results = {Event : closeFive};
 
         for (j = 0; j < 5; j++) {
             data.event[j].prices.sort();
@@ -119,9 +119,25 @@ function main() {
     }
     manhattan();
 
-    results = JSON.stringify(results, null, 4);
-    document.getElementById("results").innerHTML = results;
-    console.log(results);
-    return results;
+    html = "<table border='1|1'>";
+    for (i = 0; i < closeFive.length; i++) {
+        html += "<tr>";
+        html += "<td>" + "Event: " + closeFive[i].event_id + "</td>";
+        html += "<td>" + "Price: " + closeFive[i].price + "</td>";
+        html += "<td>" + "Distance: " + closeFive[i].distance + "</td>";
+        html += "<td>" + "X Coordinate: " + closeFive[i].x + "</td>";
+        html += "<td>" + "Y Coordinate: " + closeFive[i].y + "</td>";
+
+        html += "</tr>";
+
+    }
+    html += "</table>";
+    document.getElementById("results").innerHTML = html;
+
+    //results = JSON.stringify(results, null, 4);
+    //document.getElementById("results").innerHTML = results;
+
+    //console.log(results);
+    return closeFive;
 }
 main();
