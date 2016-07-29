@@ -1,23 +1,11 @@
 /*jslint devel: true, node: true, nomen: true, plusplus: true, vars: true, indent: 4, maxerr: 50*/
 /*global $, jQuery, angular, alert, arrayContainer:true, SliderInstance:true, DomObjects:true, document, Slider*/
 
-var xy1 = [];
+var xy1 = [], data, dist;
 
-function coordinates() {
+function eventgen() {
     "use strict";
-    var x1, y1;
-    x1 = document.getElementById("x1").value;
-    y1 = document.getElementById("y1").value;
-    xy1 = [x1, y1];
-    document.getElementById("display").innerHTML = xy1;
-    console.log(xy1);
-    return xy1;
-}
-coordinates();
-
-function main() {
-    "use strict";
-    var x2, y2, numE, xy2 = [], data, dist, results;
+    var x2, y2, numE, xy2 = [];
 
     x2 = [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -75,7 +63,24 @@ function main() {
     }
     events();
     //console.log(data)
+}
+eventgen();
 
+function coordinates() {
+    "use strict";
+    var x1, y1;
+    x1 = document.getElementById("x1").value;
+    y1 = document.getElementById("y1").value;
+    xy1 = [x1, y1];
+    document.getElementById("display").innerHTML = xy1;
+    console.log(xy1);
+    return xy1;
+}
+coordinates();
+
+function main() {
+    "use strict";
+    var results;
     function manhattan() {
         var i, j, x1, y1, x2, y2, closeFive = [];
         for (i = 0; i < data.event.length; i++) {
