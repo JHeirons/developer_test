@@ -1,6 +1,6 @@
 # developer_test
 
-Assumtions:
+Assumptions:
 
 Returned value for the Manhattan distance absolute so no way of telling whether the distance is a positive or negative vector.
 
