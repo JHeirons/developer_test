@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style1.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="js/coordinates.js"></script>
@@ -13,17 +14,18 @@
 
 <body onload="eventgen()">
     <h1> Viagogo Developer Test</h1>
+    <p>Blow please enter your X and Y coordinates:</p>
         <form id="co-form">
-            <label>Enter X Coordinate:</label><br>
+            <label>Enter X Coordinate:</label><br><br>
             <input type="number" id="x1" value="0" max="10" min="-10"><br><br>
-            <label>Enter Y Coordinate:</label> <br>
+            <label>Enter Y Coordinate:</label> <br><br>
             <input type="number" id="y1" value="0" max="10" min="-10"><br><br>
         </form>
     
         <input id="subBut" type="submit" onClick="main()">
-         <p><span id="valid"></span></p>
+         <p class="input"><span id="valid"></span></p>
         <h3>Your coordinates are:</h3>
-        <p><span id="display"></span></p>
+        <p class="input"><span id="display"></span></p>
         <h3>Events close to you:</h3>
         <div id="results">
 

@@ -9,6 +9,11 @@ td {
     vertical-align: top;
     text-align: left;
     padding: 10px;
+    font-family: arial, sans-serif;
 }
 
 tr:nth-child(odd) {background-color: #f2f2f2}
+
+h1, h3, label, p {
+    font-family: arial, sans-serif;}
+}
